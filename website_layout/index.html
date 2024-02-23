@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>WEBPAGE 1 TITLE</title>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header id="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+        </div>
+
+        <div class="navbar">
+            <div class="logo"><a href="index.html">Logo Full Name</a></div>
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="toggle_button">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown_menu">
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <main>
+        <div id="hero">
+            <div class="hero_bg_img"> </div>
+            <div class="hero_text">
+                <h1> ADD HEADING 1 </h1>
+                <p>
+                    Add your text here. <br /> It is a simple responsive text of paragraph that
+                    modifies <br /> its alignment based the the width of the screen(in pixels).
+                </p>
+            </div>
+        </div>
+    </main>
+
+
+    <!-- Toggle icon for menu for responsive part -->
+    <script>
+        const toggleBttn = document.querySelector('.toggle_button')
+        const toggleBttnIcon = document.querySelector('.toggle_button i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBttn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBttnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-bars'
+        }
+    </script>
+
+    <!-- Home Page -->
+    <div class="bg_img">
+        <div class="single_card">
+            <h2> Our objectives / What we focus on </h2>
+            <p>Insert here a little description of the company mission/objectives</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="triple_column">
+            <div class="card">
+                <img src="images/img_1.png" alt="Objective 1" style="width:100%; border-radius: 10px;" />
+                <h3>Objective 1</h3>
+                <p>Some text</p>
+                <p>Some text</p>
+            </div>
+        </div>
+
+        <div class="triple_column">
+            <div class="card">
+                <img src="images/img_2.png" alt="Objective 2" style="width:100%; border-radius: 10px;" />
+                <h3>Objective 2</h3>
+                <p>Some text</p>
+                <p>Some text</p>
+            </div>
+        </div>
+
+        <div class="triple_column">
+            <div class="card">
+                <img src="images/img_3.png" alt="Objective 3" style="width:100%; border-radius: 10px;" />
+                <h3>Objective 3</h3>
+                <p>Some text</p>
+                <p>Some text</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="divider"> <p>About Us</p></div>
+
+    <div class="single_card single_card_about">
+       <p> insert here business details such as exec-director, the year the business was founded <br />
+        the revenue for last year, and details about the ceo and so on....(maybe add image/graph)</p>
+    </div>
+
+    <div style="height: 50px;"> </div>
+
+
+    <footer class="socials_footer">
+        <p style="margin: 0;">
+            socials  | <a href="https://www.facebook.com/profile.php?id=100088900857874&sk=followers" style="display: inline-block;">
+                <i class="fa-brands fa-square-facebook" style="color: #85ff75;"></i> Facebook
+            </a>
+        </p>
+    </footer>
+
+    <!-- Scroll bar and hiding the navbar -->
+    <script>
+        var beforeScroll_pos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScroll_pos = window.pageYOffset;
+            if (beforeScroll_pos > currentScroll_pos) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-50px";
+            }
+            beforeScroll_pos = currentScroll_pos;
+        }
+    </script>
+
+</body>
+
+</html>
